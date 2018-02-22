@@ -8,13 +8,135 @@
     tools:context="com.example.ejercicio_final2.InformeSeriesActivity">
 
     <TextView
-        android:id="@+id/InforTvNombre"
+        android:id="@+id/InfoTvNombre"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="TextView"
-        android:textSize="40dp"
+        android:layout_height="125dp"
+        android:background="@color/colorCoralDark"
         android:gravity="center"
         android:textColor="@color/colorWhite"
-        android:textStyle="italic"
-        android:background="@color/colorCoralDark"/>
+        android:textSize="40dp"
+        android:textStyle="italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/InfoIvTemporadas"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/temporadas" />
+
+        <TextView
+            android:id="@+id/InfoTvTemporadas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="18dp"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/capitulos" />
+
+        <TextView
+            android:id="@+id/InfoTvCapitulos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="18dp"
+            android:padding="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/InfoIvGenero"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/genero" />
+
+        <TextView
+            android:id="@+id/InfoTvGenero"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="18dp"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/InfoIvYear"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/year" />
+
+        <TextView
+            android:id="@+id/InfoTvYear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="18dp"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/InfoIvSipnosis"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/sipnosis" />
+
+        <TextView
+            android:id="@+id/InfoTvSipnosis"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack"
+            android:textSize="18dp"
+            android:padding="5dp" />
+
+    </LinearLayout>
 </LinearLayout>
