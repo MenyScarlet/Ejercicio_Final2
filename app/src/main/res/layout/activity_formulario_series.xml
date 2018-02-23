@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context="com.example.ejercicio_final2.FormularioSeriesActivity">
+    tools:context="com.example.ejercicio_final2.FormularioSeriesActivity"
+    android:background="@color/colorYellowEgg">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -31,10 +32,11 @@
                 <EditText
                     android:id="@+id/ForEtNombre"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:textColor="@color/colorBlack"/>
+                    android:textColor="@color/colorBlack"
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -192,7 +194,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Borrar"
-                android:onClick="clickForBtnBorrar"/>
+                android:onClick="clickForBtnBorrar"
+                android:background="@drawable/fondo_botones"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/btnGuardar"
@@ -200,7 +205,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Guardar"
-                android:onClick="clickForBtnGuardar"/>
+                android:onClick="clickForBtnGuardar"
+                android:background="@drawable/fondo_botones"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"/>
         </LinearLayout>
     </RelativeLayout>
 

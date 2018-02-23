@@ -7,14 +7,18 @@
     android:orientation="vertical"
     tools:context="com.example.ejercicio_final2.MenuActivity"
     android:padding="10dp"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@color/colorYellowEgg">
 
     <Button
         android:id="@+id/button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Nueva serie"
-        android:onClick="MBtnNuevaSerie"/>
+        android:onClick="MBtnNuevaSerie"
+        android:background="@drawable/fondo_botones"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/button2"
@@ -22,5 +26,8 @@
         android:layout_height="wrap_content"
         android:text="Ver Series"
         android:layout_marginTop="10dp"
-        android:onClick="MBtnVerSeries"/>
+        android:onClick="MBtnVerSeries"
+        android:background="@drawable/fondo_botones"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"/>
 </LinearLayout>

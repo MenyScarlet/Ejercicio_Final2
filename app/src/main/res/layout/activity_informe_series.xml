@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.ejercicio_final2.InformeSeriesActivity">
+    tools:context="com.example.ejercicio_final2.InformeSeriesActivity"
+    android:background="@color/colorYellowEgg">
 
     <TextView
         android:id="@+id/InfoTvNombre"
