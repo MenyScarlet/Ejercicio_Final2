@@ -1,7 +1,9 @@
 package com.example.ejercicio_final2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -10,4 +12,17 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
     }
+
+    public void MBtnNuevaSerie (View view){
+
+        Intent i = new Intent(getApplicationContext(),FormularioSeriesActivity.class);
+        startActivity(i);
+    }
+
+    public void MBtnVerSeries (View view){
+
+        Intent i = new Intent(getApplicationContext(),ListViewSeriesActivity.class);
+        startActivity(i);
+    }
+
 }

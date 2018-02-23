@@ -104,21 +104,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Acción" />
+                        android:text="Acción"
+                        android:textColorLink="@color/colorCoralDark" />
 
                     <RadioButton
                         android:id="@+id/rbTerror"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Terror" />
+                        android:text="Terror"
+                        android:textColorLink="@color/colorCoralDark" />
 
                     <RadioButton
                         android:id="@+id/rbHumor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Humor" />
+                        android:text="Humor"
+                        android:textColorLink="@color/colorCoralDark" />
                 </RadioGroup>
 
                 <RadioGroup
@@ -132,21 +135,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Romance" />
+                        android:text="Romance"
+                        android:textColorLink="@color/colorCoralDark" />
 
                     <RadioButton
                         android:id="@+id/rbFamiliar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Familiar" />
+                        android:text="Familiar"
+                        android:textColorLink="@color/colorCoralDark" />
 
                     <RadioButton
                         android:id="@+id/rbAventura"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Aventura" />
+                        android:text="Aventura"
+                        android:textColorLink="@color/colorCoralDark" />
                 </RadioGroup>
 
                 <TextView
@@ -157,12 +163,12 @@
                     android:textColor="@color/colorBlack"/>
 
                 <EditText
-                    android:id="@+id/ForEtAño"
+                    android:id="@+id/ForEtYear"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:textColor="@color/colorBlack"/>
+                    android:textColor="@color/colorBlack" />
 
                 <TextView
                     android:id="@+id/tvSipnosis"
@@ -172,12 +178,12 @@
                     android:textColor="@color/colorBlack"/>
 
                 <EditText
-                    android:id="@+id/ForEt"
+                    android:id="@+id/ForEtSipnosis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textMultiLine"
-                    android:textColor="@color/colorBlack"/>
+                    android:textColor="@color/colorBlack" />
 
             </LinearLayout>
 
