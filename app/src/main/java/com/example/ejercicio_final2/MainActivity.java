@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        setContentView(R.layout.splash_screen);
+        setContentView(R.layout.activity_main);
 
         TimerTask task = new TimerTask() {
             @Override
