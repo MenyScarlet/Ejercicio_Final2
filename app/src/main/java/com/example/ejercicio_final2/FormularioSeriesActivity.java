@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class FormularioSeriesActivity extends AppCompatActivity {
 
+    static final String EXTRA_SERIE = "EXTRA_SERIE";
     EditText ForEtNombre, ForEtTemporada, ForEtEpisodio, ForEtYear, ForEtSipnosis;
     RadioGroup ForRgGenero1, ForRgGenero2;
 
@@ -27,10 +28,30 @@ public class FormularioSeriesActivity extends AppCompatActivity {
         ForRgGenero1 = (RadioGroup)findViewById(R.id.ForRgGenero1);
         ForRgGenero2 = (RadioGroup)findViewById(R.id.ForRgGenero2);
 
+        ForRgGenero1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if( i != -1 ) {
+                    if (ForRgGenero2.getCheckedRadioButtonId() != -1) {
+                        ForRgGenero2.clearCheck();
+                    }
+                    radioGroup.check(i);
+                }
+            }
+        });
+
+        ForRgGenero2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if( i != -1 ) {
+                    if (ForRgGenero1.getCheckedRadioButtonId() != -1) {
+                        ForRgGenero1.clearCheck();
+                    }
+                    radioGroup.check(i);
+                }
+            }
+        });
     }//FIN onCreate
-
-
-
 
     public void clickForBtnGuardar (View view){
 
@@ -39,27 +60,39 @@ public class FormularioSeriesActivity extends AppCompatActivity {
         String episodios = ForEtEpisodio.getText().toString();
         String year = ForEtYear.getText().toString();
         String sipnosis = ForEtSipnosis.getText().toString();
-        int idGenero = ForRgGenero1.getCheckedRadioButtonId() +
-                ForRgGenero2.getCheckedRadioButtonId();
-        //RadioButton rbSelecionado = (RadioButton)findViewById(idGenero);
-        //String textoRbSeleccionado = rbSelecionado.getText().toString();
+
+        int IdRgGenero1 = ForRgGenero1.getCheckedRadioButtonId();
+        int IdRgGenero2 = ForRgGenero2.getCheckedRadioButtonId();
+
+        String genero = "";
+        if(IdRgGenero1!=-1){
+            RadioButton r = (RadioButton)  ForRgGenero1.findViewById(IdRgGenero1);
+            genero = r.getText().toString();
+        } else if(IdRgGenero2!=-1){
+            RadioButton r = (RadioButton)  ForRgGenero2.findViewById(IdRgGenero2);
+            genero = r.getText().toString();
+        }
 
 
         if (nombre.equals("") || temporada.equals("") || episodios.equals("")
-                || year.equals("") || idGenero == -1) {
+                || year.equals("") || genero.equals("")) {
 
             Toast.makeText(getApplicationContext(),
                     "Debes de rellenar todos los campos",
                     Toast.LENGTH_LONG).show();
         }else{
-            //Combertir string en int de temporada y episodio
-            Serie serie = new Serie(nombre,temporada,episodios,idGenero,year,sipnosis);
+
+            int temporadaint = Integer.parseInt(temporada);
+            int episodioint = Integer.parseInt(episodios);
+
+            Serie serie = new Serie(nombre, temporadaint, episodioint, genero, year, sipnosis);
 
             Intent i = new Intent(getApplicationContext(),
                     ListViewSeriesActivity.class);
-            //i.putExtra();
-            startActivity(i);
 
+            i.putExtra(EXTRA_SERIE, serie);
+
+            startActivity(i);
         }
 
     }

@@ -1,7 +1,10 @@
 package com.example.ejercicio_final2;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.v4.content.ContextCompat;
 
 /**
  * Created by Melania on 23/02/2018.
@@ -31,8 +34,7 @@ public class Serie implements Parcelable {
 
     //Constructor
 
-    public Serie(String nombre, int temporada, int episodio,
-                 String genero, String year, String sipnosis) {
+    public Serie(String nombre, int temporada, int episodio, String genero, String year, String sipnosis) {
         this.nombre = nombre;
         this.temporada = temporada;
         this.episodio = episodio;
@@ -112,17 +114,20 @@ public class Serie implements Parcelable {
         parcel.writeString(this.sipnosis);
         parcel.writeInt(this.temporada);
         parcel.writeInt(this.episodio);
+    }
 
+
+    private void readFromParcel (Parcel p){
+        this.nombre = p.readString();
+        this.genero = p.readString();
+        this.year = p.readString();
+        this.sipnosis = p.readString();
+        this.temporada = p.readInt();
+        this.episodio = p.readInt();
     }
 }
 
-private void readFromParcel (Parcel p){
 
-    this.nombre = p.readString();
-    this.genero = p.readString();
-    this.year = p.readString();
-    this.sipnosis = p.readString();
-    this.temporada = p.readInt();
-    this.episodio = p.readInt();
 
-}
+
+
